@@ -6,7 +6,7 @@
 /*   By: adrperez <adrperez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 12:22:45 by adrperez          #+#    #+#             */
-/*   Updated: 2022/09/29 12:10:15 by adrperez         ###   ########.fr       */
+/*   Updated: 2022/09/29 13:08:52 by adrperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,8 @@
 
 static int	num_words(char const *s, char c)
 {	
-	int		num;
-	unsigned int flag;
+	int				num;
+	unsigned int	flag;
 
 	num = 0;
 	flag = 0;
@@ -61,17 +61,17 @@ static int	num_words(char const *s, char c)
 	return (num);
 }
 
-static void	ft_free_matrix(char** matrix, int row)
+static void	ft_free_matrix(char **matrix, int row)
 {
 	while (row >= 0)
 	{
 		free(matrix[row]);
-		row--; 
+		row--;
 	}
 	free(matrix);
 }
 
-static const char	*num_letters(char const *s, char c, char** matrix, int row)
+static const char	*num_letters(char const *s, char c, char **matrix, int row)
 {
 	int	letters;
 	int	i;
@@ -92,7 +92,6 @@ static const char	*num_letters(char const *s, char c, char** matrix, int row)
 		return (NULL);
 	}
 	s = s + i - letters;
-	// fill_matrix(s, matrix, row, letters + 1);
 	ft_strlcpy(matrix[row], s, letters + 1);
 	return (s + letters + 1);
 }
@@ -103,11 +102,9 @@ char	**ft_split(char const *s, char c)
 	int		rows;
 	int		words;
 
-	if (!c)
+	if (!s)
 		return (0);
 	rows = num_words(s, c);
-	if (rows == 0)
-		return (NULL);
 	matrix = malloc(sizeof(char *) * (rows + 1));
 	if (!matrix)
 		return (NULL);

@@ -6,7 +6,7 @@
 /*   By: adrperez <adrperez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 13:43:26 by adrperez          #+#    #+#             */
-/*   Updated: 2022/09/29 12:37:37 by adrperez         ###   ########.fr       */
+/*   Updated: 2022/09/29 12:51:53 by adrperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -209,8 +209,8 @@ int	main(void)
 	printf("ft_strtrim: %s\n", ft_strtrim(str16, set));
 	printf("ft_strtrim: %s\n", ft_strtrim(str16, set));
 	printf("--------------\n");
-	char	*str18 = "          ";
-	char	**res = ft_split(str18, ' ');
+	char	*str18 = "\0aa\0bbb";
+	char	**res = ft_split(str18, '\0');
 	int j = 0;
 	while (res)
 	{
