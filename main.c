@@ -6,7 +6,7 @@
 /*   By: adrperez <adrperez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 13:43:26 by adrperez          #+#    #+#             */
-/*   Updated: 2022/09/27 14:54:23 by adrperez         ###   ########.fr       */
+/*   Updated: 2022/09/29 10:33:35 by adrperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,12 +95,17 @@ int	main(void)
 	printf("ft_strlcpy tamaño: %zu, resultado destino: %s\n", ft_strlcpy(dest4, src4, 100), dest4);
 	printf("strlcpy tamaño: %lu, resultado destino: %s\n", strlcpy(dest5, src5, 100), dest5);
 	printf("--------------\n");
-	char src6[] = "caracola";
-	char *dest6 = 0;
-	char src7[] = "caracola";
-	char *dest7 = 0;
-	printf("ft_strlcat return: %zu, resultado destino: %s\n", ft_strlcat(dest6, src6, 0), dest6);
-	printf("strlcat return: %lu, resultado destino: %s\n", strlcat(dest7, src7, 0), dest7);
+	// char src6[] = "caracola";
+	// char *dest6 = 0;
+	// char src7[] = "caracola";
+	// char *dest7 = 0;
+	char *desttttt;
+	desttttt = (char *)malloc(sizeof(*desttttt) * 15);
+	memset(desttttt, 'r', 15);
+	printf("destttt: %s", desttttt);
+	printf("ft_strlcat return: %zu, resultado destino: %s\n", ft_strlcat(desttttt, "lorem ipsum dolor sit amet", 5), desttttt);
+	memset(desttttt, 'r', 15);
+	printf("strlcat return: %zu, resultado destino: %s\n", strlcat(desttttt, "lorem ipsum dolor sit amet", 5), desttttt);
 	printf("--------------\n");
 	char letra = 'c';
 	char letra1 = 'c';
@@ -113,11 +118,11 @@ int	main(void)
 	printf("tolower return: %d\n", tolower(letra1));
 	printf("--------------\n");
 	char *s = "aaac";
-	letra = 'c';
+	//letra = 1024;
 	char *s1 = "aaac";
-	letra1 = 'c';
- 	printf("ft_strchr return: %s\n", ft_strchr(s, letra));
-	printf("strchr return: %s\n", strchr(s1, letra1));
+	//letra1 = 1024;
+ 	printf("ft_strchr return: %s\n", ft_strchr(s, 1024));
+	printf("strchr return: %s\n", strchr(s1, 1024));
 	printf("--------------\n");	
 	char *s2 = "caracola";
 	letra = 'c';
@@ -215,5 +220,8 @@ int	main(void)
 	int num = -1234;
 	char *resss = ft_itoa(num);
 	printf("ft_itoa: %s, size of:%zu \n ", resss, strlen(resss));
+	printf("--------------\n");
+	printf("ft_strmapi: %s, ", ft_strmapi("olol", NULL));
+	//printf("ft_strmapi: %s, ", ft_strmapi(NULL, NULL));
 	return (0);
 }

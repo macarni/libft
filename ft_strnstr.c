@@ -6,7 +6,7 @@
 /*   By: adrperez <adrperez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 11:49:12 by adrperez          #+#    #+#             */
-/*   Updated: 2022/09/27 19:30:43 by adrperez         ###   ########.fr       */
+/*   Updated: 2022/09/29 08:43:39 by adrperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,8 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	char	*aux_haystack;
 	char	*aux_needle;
 
-	*aux_haystack = (char *)haystack;
-	*aux_needle = (char *)needle;
+	aux_haystack = (char *)haystack;
+	aux_needle = (char *)needle;
 	i = 0;
 	if (aux_needle[i] == '\0')
 		return (aux_haystack);

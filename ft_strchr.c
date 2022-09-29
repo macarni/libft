@@ -6,7 +6,7 @@
 /*   By: adrperez <adrperez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 11:16:10 by adrperez          #+#    #+#             */
-/*   Updated: 2022/09/27 19:20:39 by adrperez         ###   ########.fr       */
+/*   Updated: 2022/09/29 09:43:38 by adrperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,15 +20,17 @@
  * @return A pointer to the first occurrence of the character c in the string s.
  */
 
+#include "libft.h"
+
 char	*ft_strchr(const char *s, int c)
 {
-	while (*s != '\0')
+	while (*s)
 	{
 		if (*s == (char)c)
 			return ((char *)s);
 		s++;
 	}	
-	if (c == '\0')
+	if (*s == (char)c)
 		return ((char *)s);
 	return (0);
 }
