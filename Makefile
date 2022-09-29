@@ -6,7 +6,7 @@
 #    By: adrperez <adrperez@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/19 15:32:54 by adrperez          #+#    #+#              #
-#    Updated: 2022/09/29 09:29:53 by adrperez         ###   ########.fr        #
+#    Updated: 2022/09/29 10:54:12 by adrperez         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,6 +40,7 @@ SRCS		= 	ft_bzero.c \
 				ft_substr.c \
 				ft_strjoin.c \
 				ft_strtrim.c \
+				ft_split.c \
 				ft_itoa.c \
 				ft_strmapi.c \
 				ft_striteri.c \

@@ -6,7 +6,7 @@
 /*   By: adrperez <adrperez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 13:43:26 by adrperez          #+#    #+#             */
-/*   Updated: 2022/09/29 10:33:35 by adrperez         ###   ########.fr       */
+/*   Updated: 2022/09/29 10:53:10 by adrperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -209,13 +209,13 @@ int	main(void)
 	printf("ft_strtrim: %s\n", ft_strtrim(str16, set));
 	printf("ft_strtrim: %s\n", ft_strtrim(str16, set));
 	printf("--------------\n");
-	// char	*str18 = "   hola que pasa";
-	// char	**res = ft_split(str18, ' ');
-	// while (res)
-	// {
-	// 	printf("ft_split: %s\n", *res);
-	// 	res++;
-	// }
+	char	*str18 = "   hola que pasa";
+	char	**res = ft_split(str18, ' ');
+	while (res)
+	{
+		printf("ft_split: %s\n", *res);
+		res++;
+	}
 	printf("--------------\n");
 	int num = -1234;
 	char *resss = ft_itoa(num);
