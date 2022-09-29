@@ -6,16 +6,16 @@
 /*   By: adrperez <adrperez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 14:24:05 by adrperez          #+#    #+#             */
-/*   Updated: 2022/09/27 18:44:51 by adrperez         ###   ########.fr       */
+/*   Updated: 2022/09/29 15:04:49 by adrperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /**
- * If the destination is less than the source, then copy the source 
- * to the destination. Otherwise, copy
- * the source to the destination in reverse
+ * The memmove() function copies len bytes from string src to 
+ * string dst. The two strings may overlap; the copy is always done 
+ * in a non-destructive manner.
  * 
  * @param dst This is the destination array where the content is 
  * to be copied, type-casted to a

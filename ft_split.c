@@ -6,39 +6,11 @@
 /*   By: adrperez <adrperez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 12:22:45 by adrperez          #+#    #+#             */
-/*   Updated: 2022/09/29 13:08:52 by adrperez         ###   ########.fr       */
+/*   Updated: 2022/09/29 14:47:31 by adrperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-// /*
-// Parámetros s: La string a separar.
-// c: El carácter delimitador.
-// Valor devuelto El array de nuevas strings resulatente de la
-// separación.
-// NULL si falla la reserva de memoria.
-// Funciones autorizadas
-// malloc, free
-// Descripción Reserva (utilizando malloc(3)) un array de strings
-// resultante de separar la string ’s’ en substrings
-// utilizando el caracter ’c’ como delimitador. El
-// array debe terminar con un puntero NULL
-// */
-
-// static void	fill_matrix(char const *s, char** matrix, int row, int size)
-// {
-// 	int i;
-
-// 	i = 0;
-// 	while (--size > 0)
-// 	{
-// 		matrix[row][i] = (char)*s;
-// 		s++;
-// 		i++;
-// 	}
-// 	matrix[row][i] = 0;
-// }
 
 static int	num_words(char const *s, char c)
 {	
@@ -96,6 +68,16 @@ static const char	*num_letters(char const *s, char c, char **matrix, int row)
 	return (s + letters + 1);
 }
 
+/**
+ * It takes a string and a character, and returns a matrix of strings,
+ * each string being a word from
+ * the original string, separated by the character
+ * 
+ * @param s The string to be split.
+ * @param c the character to split the string by
+ * 
+ * @return A pointer to a pointer to a char.
+ */
 char	**ft_split(char const *s, char c)
 {
 	char	**matrix;

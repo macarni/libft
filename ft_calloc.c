@@ -6,7 +6,7 @@
 /*   By: adrperez <adrperez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 14:27:43 by adrperez          #+#    #+#             */
-/*   Updated: 2022/09/23 15:20:58 by adrperez         ###   ########.fr       */
+/*   Updated: 2022/09/29 14:55:24 by adrperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,21 +16,21 @@
  * It allocates memory for a given size and fills it with zeros.
  * 
  * @param count The number of elements to be allocated.
- * @param size The number of elements to be allocated.
+ * @param size The bytes of memory each of each elements to be allocated.
  * 
  * @return A pointer to the allocated memory.
  */
 void	*ft_calloc(size_t count, size_t size)
 {
-	void	*space;
+	void	*pointer;
 	int		num;
 
 	num = count * size;
 	if (num == 1 && count != 1)
 		return (NULL);
-	space = malloc(num);
-	if (!space)
+	pointer = malloc(num);
+	if (!pointer)
 		return (0);
-	ft_bzero(space, num);
-	return (space);
+	ft_bzero(pointer, num);
+	return (pointer);
 }

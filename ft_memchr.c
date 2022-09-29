@@ -6,7 +6,7 @@
 /*   By: adrperez <adrperez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 11:29:11 by adrperez          #+#    #+#             */
-/*   Updated: 2022/09/27 18:43:22 by adrperez         ###   ########.fr       */
+/*   Updated: 2022/09/29 15:01:36 by adrperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 /**
  * The function ft_memchr() locates the first occurrence of c 
  * (converted to an unsigned char) in string
- * s
+ * 
  * @param s This is the pointer to the first byte of the memory area.
  * @param c The character to search for.
  * @param n The number of bytes to be checked.
