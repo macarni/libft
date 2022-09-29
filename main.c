@@ -6,7 +6,7 @@
 /*   By: adrperez <adrperez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 13:43:26 by adrperez          #+#    #+#             */
-/*   Updated: 2022/09/29 10:53:10 by adrperez         ###   ########.fr       */
+/*   Updated: 2022/09/29 12:37:37 by adrperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -209,12 +209,13 @@ int	main(void)
 	printf("ft_strtrim: %s\n", ft_strtrim(str16, set));
 	printf("ft_strtrim: %s\n", ft_strtrim(str16, set));
 	printf("--------------\n");
-	char	*str18 = "   hola que pasa";
+	char	*str18 = "          ";
 	char	**res = ft_split(str18, ' ');
+	int j = 0;
 	while (res)
 	{
-		printf("ft_split: %s\n", *res);
-		res++;
+		printf("ft_split: %s\n", res[j]);
+		j++;
 	}
 	printf("--------------\n");
 	int num = -1234;
@@ -222,6 +223,6 @@ int	main(void)
 	printf("ft_itoa: %s, size of:%zu \n ", resss, strlen(resss));
 	printf("--------------\n");
 	printf("ft_strmapi: %s, ", ft_strmapi("olol", NULL));
-	//printf("ft_strmapi: %s, ", ft_strmapi(NULL, NULL));
+	//printf("ft_strmapi: %s, ", ft_strmapi(NULL, NULL)); write(1, "hola", 5);
 	return (0);
 }

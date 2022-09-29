@@ -6,7 +6,7 @@
 /*   By: adrperez <adrperez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 12:22:45 by adrperez          #+#    #+#             */
-/*   Updated: 2022/09/29 10:55:48 by adrperez         ###   ########.fr       */
+/*   Updated: 2022/09/29 12:10:15 by adrperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,71 +26,99 @@
 // array debe terminar con un puntero NULL
 // */
 
+// static void	fill_matrix(char const *s, char** matrix, int row, int size)
+// {
+// 	int i;
+
+// 	i = 0;
+// 	while (--size > 0)
+// 	{
+// 		matrix[row][i] = (char)*s;
+// 		s++;
+// 		i++;
+// 	}
+// 	matrix[row][i] = 0;
+// }
+
 static int	num_words(char const *s, char c)
 {	
-	int	num;
+	int		num;
 	unsigned int flag;
 
 	num = 0;
 	flag = 0;
-	while (s)
+	while (*s)
 	{
-		if (*s == c)
+		if (*s == c && flag == 1)
+			flag = 0;
+		else if (*s != c && flag == 0)
 		{
-			if (flag == 1)
-				flag = 0;
+			flag = 1;
+			num++;
 		}
-		else
-		{
-			if (flag == 0)
-			{
-				flag = 1;
-				num++;
-			}
-		}	
-			
 		s++;
 	}	
 	return (num);
 }
 
+static void	ft_free_matrix(char** matrix, int row)
+{
+	while (row >= 0)
+	{
+		free(matrix[row]);
+		row--; 
+	}
+	free(matrix);
+}
+
 static const char	*num_letters(char const *s, char c, char** matrix, int row)
 {
 	int	letters;
+	int	i;
 
+	i = 0;
 	letters = 0;
-	while (s && *s != c)
+	while (s[i] == c)
+		i++;
+	while (s[i] && s[i] != c)
 	{
 		letters++;
-		s++;
+		i++;
 	}
-	matrix[row] = malloc(sizeof(char) * letters + 1);
+	matrix[row] = malloc(sizeof(char) * (letters + 1));
 	if (matrix[row] == 0)
 	{
-		free(matrix);
+		ft_free_matrix(matrix, row);
 		return (NULL);
 	}
+	s = s + i - letters;
+	// fill_matrix(s, matrix, row, letters + 1);
 	ft_strlcpy(matrix[row], s, letters + 1);
-	return (s);
+	return (s + letters + 1);
 }
 
 char	**ft_split(char const *s, char c)
 {
 	char	**matrix;
 	int		rows;
+	int		words;
 
+	if (!c)
+		return (0);
 	rows = num_words(s, c);
 	if (rows == 0)
 		return (NULL);
-	matrix = malloc(sizeof(char *) * rows + 1);
+	matrix = malloc(sizeof(char *) * (rows + 1));
 	if (!matrix)
 		return (NULL);
-	while (rows)
+	words = 0;
+	while (words < rows)
 	{
-		s = num_letters(s, c, matrix, rows);
+		s = num_letters(s, c, matrix, words);
 		if (!s)
 			return (NULL);
-		rows++;
+		words++;
 	}
+	matrix[rows] = 0;
 	return (matrix);
 }
