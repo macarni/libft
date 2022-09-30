@@ -6,7 +6,7 @@
 /*   By: adrperez <adrperez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 13:43:26 by adrperez          #+#    #+#             */
-/*   Updated: 2022/09/29 12:51:53 by adrperez         ###   ########.fr       */
+/*   Updated: 2022/09/30 09:06:40 by adrperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,7 +102,7 @@ int	main(void)
 	char *desttttt;
 	desttttt = (char *)malloc(sizeof(*desttttt) * 15);
 	memset(desttttt, 'r', 15);
-	printf("destttt: %s", desttttt);
+	printf("destttt: %s\n", desttttt);
 	printf("ft_strlcat return: %zu, resultado destino: %s\n", ft_strlcat(desttttt, "lorem ipsum dolor sit amet", 5), desttttt);
 	memset(desttttt, 'r', 15);
 	printf("strlcat return: %zu, resultado destino: %s\n", strlcat(desttttt, "lorem ipsum dolor sit amet", 5), desttttt);
@@ -209,14 +209,14 @@ int	main(void)
 	printf("ft_strtrim: %s\n", ft_strtrim(str16, set));
 	printf("ft_strtrim: %s\n", ft_strtrim(str16, set));
 	printf("--------------\n");
-	char	*str18 = "\0aa\0bbb";
-	char	**res = ft_split(str18, '\0');
-	int j = 0;
-	while (res)
-	{
-		printf("ft_split: %s\n", res[j]);
-		j++;
-	}
+	// char	*str18 = "\0aa\0bbb";
+	// char	**res = ft_split(str18, '\0');
+	// int j = 0;
+	// while (res)
+	// {
+	// 	printf("ft_split: %s\n", res[j]);
+	// 	j++;
+	// }
 	printf("--------------\n");
 	int num = -1234;
 	char *resss = ft_itoa(num);
