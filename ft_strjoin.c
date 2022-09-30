@@ -6,7 +6,7 @@
 /*   By: adrperez <adrperez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 08:28:22 by adrperez          #+#    #+#             */
-/*   Updated: 2022/09/27 19:25:13 by adrperez         ###   ########.fr       */
+/*   Updated: 2022/09/30 11:29:22 by adrperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	concat = ft_calloc(len, sizeof(char));
 	if (!concat)
 		return (NULL);
-	strlcat(concat, s1, len);
-	strlcat(concat, s2, len);
+	ft_strlcat(concat, s1, len);
+	ft_strlcat(concat, s2, len);
 	return (concat);
 }

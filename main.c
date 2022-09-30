@@ -6,7 +6,7 @@
 /*   By: adrperez <adrperez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 13:43:26 by adrperez          #+#    #+#             */
-/*   Updated: 2022/09/30 09:06:40 by adrperez         ###   ########.fr       */
+/*   Updated: 2022/09/30 10:13:12 by adrperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,6 +106,14 @@ int	main(void)
 	printf("ft_strlcat return: %zu, resultado destino: %s\n", ft_strlcat(desttttt, "lorem ipsum dolor sit amet", 5), desttttt);
 	memset(desttttt, 'r', 15);
 	printf("strlcat return: %zu, resultado destino: %s\n", strlcat(desttttt, "lorem ipsum dolor sit amet", 5), desttttt);
+	memset(desttttt, 0, 15);
+	memset(desttttt, 'r', 6);
+	desttttt[10] = 'a';
+	printf("ft_strlcat return: %zu, resultado destino: %s\n", ft_strlcat(desttttt, "lorem ipsum dolor sit amet", 6), desttttt);
+	memset(desttttt, 0, 15);
+	memset(desttttt, 'r', 6);
+	desttttt[10] = 'a';
+	printf("strlcat return: %zu, resultado destino: %s\n", strlcat(desttttt, "lorem ipsum dolor sit amet", 6), desttttt);
 	printf("--------------\n");
 	char letra = 'c';
 	char letra1 = 'c';

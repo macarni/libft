@@ -6,15 +6,12 @@
 /*   By: adrperez <adrperez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 13:55:23 by adrperez          #+#    #+#             */
-/*   Updated: 2022/09/29 10:53:48 by adrperez         ###   ########.fr       */
+/*   Updated: 2022/09/30 11:27:54 by adrperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-# include <string.h>
-# include <stdio.h>
-# include <ctype.h>
 # include <stdlib.h>
 # include <unistd.h>
 
