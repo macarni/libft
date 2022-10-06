@@ -6,7 +6,7 @@
 #    By: adrperez <adrperez@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/19 15:32:54 by adrperez          #+#    #+#              #
-#    Updated: 2022/09/29 10:54:12 by adrperez         ###   ########.fr        #
+#    Updated: 2022/10/06 16:50:28 by adrperez         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,7 +49,13 @@ SRCS		= 	ft_bzero.c \
 				ft_putendl_fd.c \
 				ft_putnbr_fd.c
 
+BONUS_SRCS	=	ft_lstnew.c \
+				ft_lstadd_front.c \
+				ft_lstsize.c
+
 OBJS		= 	$(SRCS:.c=.o)
+
+BONUS_OBJS	=	$(BONUS_SRCS:.c=.o)
 
 #Compilation
 CC			=	gcc
@@ -67,9 +73,12 @@ all:		$(NAME)
 $(NAME):	$(OBJS) 
 			ar -rcs $(NAME) $(OBJS)
 
+bonus: 		$(OBJS) $(BONUS_OBJS)
+			ar -rcs $(NAME) $(OBJS) $(BONUS_OBJS)
+
 #Cleaning objects (Eliminacion de objetos)
 clean:
-			$(RM) $(OBJS)
+			$(RM) $(OBJS) $(BONUS_OBJS)
 
 #Cleaning objects and executable 
 fclean:		clean
@@ -79,4 +88,4 @@ fclean:		clean
 re:			fclean all
 
 #Exectute no matter name is
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re bonus
