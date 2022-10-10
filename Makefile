@@ -6,7 +6,7 @@
 #    By: adrperez <adrperez@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/19 15:32:54 by adrperez          #+#    #+#              #
-#    Updated: 2022/10/06 16:50:28 by adrperez         ###   ########.fr        #
+#    Updated: 2022/10/07 09:39:21 by adrperez         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,7 +51,9 @@ SRCS		= 	ft_bzero.c \
 
 BONUS_SRCS	=	ft_lstnew.c \
 				ft_lstadd_front.c \
-				ft_lstsize.c
+				ft_lstsize.c \
+				ft_lstlast.c \
+				ft_lstadd_back.c
 
 OBJS		= 	$(SRCS:.c=.o)
 
