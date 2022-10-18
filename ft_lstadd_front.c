@@ -6,7 +6,7 @@
 /*   By: adrperez <adrperez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 16:36:59 by adrperez          #+#    #+#             */
-/*   Updated: 2022/10/06 16:49:07 by adrperez         ###   ########.fr       */
+/*   Updated: 2022/10/18 14:59:21 by adrperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,17 @@
  */
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	new->next = *lst;
 	*lst = new;
 }
+
+
+
+
+
+
+
+
+
+
+// new->next = *lst;
+// 	*lst = new;
