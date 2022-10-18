@@ -6,7 +6,7 @@
 /*   By: adrperez <adrperez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 09:39:25 by adrperez          #+#    #+#             */
-/*   Updated: 2022/10/14 08:52:13 by adrperez         ###   ########.fr       */
+/*   Updated: 2022/10/18 09:40:34 by adrperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,14 @@
  */
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	while ((*lst)->next != 0)
+	if (*lst)
 	{
-		*lst = (*lst)->next;
+		while ((*lst)->next != 0)
+		{
+			*lst = (*lst)->next;
+		}
+		(*lst)->next = new;
 	}
-	(*lst)->next = new;
+	else
+		*lst = new;
 }

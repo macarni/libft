@@ -6,7 +6,7 @@
 /*   By: adrperez <adrperez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 15:41:19 by adrperez          #+#    #+#             */
-/*   Updated: 2022/10/07 09:35:16 by adrperez         ###   ########.fr       */
+/*   Updated: 2022/10/18 13:36:04 by adrperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,12 @@
  */
 t_list	*ft_lstnew(void *content)
 {
-	t_list	*new_nodo;
-
-	new_nodo = malloc(sizeof(t_list));
-	if(!new_nodo)
+	t_list	*new_node;
+	
+	new_node = malloc(sizeof(t_list));
+	if (!new_node)
 		return (NULL);
-	new_nodo->content = content;
-	new_nodo->next = 0;
-	return new_nodo;
-
+	new_node->content = content;
+	new_node->next = 0;
+	return (new_node);
 }
