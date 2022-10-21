@@ -6,7 +6,7 @@
 /*   By: adrperez <adrperez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 16:50:17 by adrperez          #+#    #+#             */
-/*   Updated: 2022/10/07 09:35:20 by adrperez         ###   ########.fr       */
+/*   Updated: 2022/10/21 15:29:04 by adrperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,17 +21,47 @@
  */
 int	ft_lstsize(t_list *lst)
 {
-	int	size;
+	int		size;
+	t_list	*aux;
 
+	aux = lst; //le decimos que sean iguales, sería lo mismo que poner *aux = *lst (pero no se peude con structs)
 	size = 1;
-	if (lst)
+	if (!lst)
+		return (0);
+	while (aux->next != 0)
 	{
-		while (lst->next != 0)
-		{
-			size++;
-			lst = lst->next;
-		}
-		return (size);
+		size++;
+		aux = aux->content;
 	}
-	return (0);
+	return (size);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// int	size;
+
+// 	size = 1;
+// 	if (lst)
+// 	{
+// 		while (lst->next != 0)
+// 		{
+// 			size++;
+// 			lst = lst->next;
+// 		}
+// 		return (size);
+// 	}
+// 	return (0);
